@@ -26,11 +26,9 @@ function merge_feed(){
 }
 
 rm -rf package/custom; mkdir package/custom
-merge_feed nas "https://github.com/linkease/nas-packages;master"
-merge_feed nas_luci "https://github.com/linkease/nas-packages-luci;main"
-merge_feed helloworld "https://github.com/fw876/helloworld;master"
-merge_package https://github.com/klever1988/helloworld/branches/lean/luci-app-ssr-plus
-merge_package https://github.com/klever1988/helloworld/branches/lean/mosdns
+##merge_feed nas "https://github.com/linkease/nas-packages;master"
+##merge_feed nas_luci "https://github.com/linkease/nas-packages-luci;main"
+merge_feed helloworld "https://github.com/klever1988/helloworld;tmp"
 #merge_package https://github.com/klever1988/openwrt-mos/trunk/luci-app-mosdns
 merge_package https://github.com/project-lede/luci-app-godproxy
 merge_package https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
@@ -53,6 +51,7 @@ merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/dns2tcp
 merge_package https://github.com/jerrykuku/lua-maxminddb
 merge_package https://github.com/jerrykuku/luci-app-vssr
 merge_package https://github.com/kongfl888/luci-app-adguardhome
+merge_package https://github.com/nickilchen/luci-app-socat
 drop_package luci-app-cd8021x
 drop_package luci-app-cifs
 drop_package verysync
